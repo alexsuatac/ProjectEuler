@@ -1,5 +1,5 @@
 // find the 10,001st prime number
-// compile with g++ -g -std=c++17 -o p3 Problem3.cpp -ltbb
+// compile with g++ -g -std=c++17 -o p7 Problem7.cpp -ltbb
 // requires libtbb to be installed for <execution>
 
 #include <iostream>
