@@ -44,12 +44,8 @@ int main () {
     // 2. reduce the product of every 13 adjacent elements, and use greedy algorithm to keep track of largest
     typ largest_product = 0;
     for(std::vector<typ>::iterator it = v.begin(); it < v.end(); it++) {
-        typ current_product = 1;
-        for(int i = 0; i < 13; ++i) {
-            current_product *= *(it+i);
-        }
-        //typ current_product = std::accumulate(it, it+13, 1, std::multiplies<typ>()); 
-        //if (current_product) std::cout << current_product << " ";
+        typ current_product = std::accumulate(it, it+13, static_cast<typ>(1), std::multiplies<typ>());
+
         if(current_product >= largest_product) {
             largest_product = current_product;
         }
